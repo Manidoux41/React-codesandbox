@@ -12,4 +12,10 @@ body {
   background: $background;
   font-family: 'Arial', sans-serif;
   color: $color-1;
+  div {
+    padding: $padding-20;
+  }
+  h1 {
+    text-align: center;
+  }
 }

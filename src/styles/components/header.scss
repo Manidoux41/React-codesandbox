@@ -1,0 +1,19 @@
+@use '../abstracts' as *;
+
+.header {
+  background: #666;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    li {
+      display:flex;
+      margin: 0 30px;
+    }
+  }
+}
