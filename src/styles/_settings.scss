@@ -1,0 +1,15 @@
+@use './abstracts' as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  background: $background;
+  font-family: 'Arial', sans-serif;
+  color: $color-1;
+}
