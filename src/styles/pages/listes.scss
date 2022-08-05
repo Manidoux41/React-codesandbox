@@ -1,2 +1,31 @@
 @use '../abstracts' as *;
 
+.liste {
+  padding: $padding-20;
+  ul {
+    width: 80vw;
+    height: auto;
+    margin: 70px auto;
+    padding: $padding-20;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    li {
+      font-size: 1.5rem;
+      button {
+        padding: 1px 3px;
+        border: none;
+        background: red;
+        border-radius: 10px;
+        font-size: 3rem;
+        font-weight: 600;
+        color: $color-1;
+        box-shadow: 2px 2px 3px rgba($color: #000000, $alpha: .7)    ;
+      }
+    }
+  }
+}
+
+
+

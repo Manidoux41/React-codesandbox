@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Fruit from "../components/Fruit";
+import FruitForm from "../components/FruitForm";
 
 // states (état, données)
 const Listes = () => {
@@ -7,6 +9,8 @@ const Listes = () => {
     { id: 2, nom: "Banane" },
     { id: 3, nom: "Cerise" }
   ]);
+
+  // const inputRef = useRef();
 
   // Comportements
   const handleDelete = (id) => {
@@ -19,18 +23,33 @@ const Listes = () => {
     setFruits(fruitsCopyUpdated);
   };
 
+  const handleAdd = (fruitAAjouter) => {
+    const fruitsCopy = [...fruits];
+
+    fruitsCopy.push(fruitAAjouter);
+
+    setFruits(fruitsCopy);
+  };
+
   // affichage(render)
   return (
     <div className="liste">
       <h1>Listes</h1>
       <ul>
         {fruits.map((fruit) => (
-          <li key={fruit.id}>
-            {fruit.nom}{" "}
-            <button onClick={() => handleDelete(fruit.id)}>x</button>
-          </li>
+          <Fruit
+            fruitInfo={fruit}
+            onFruitDelete={handleDelete}
+            key={fruit.id}
+          />
         ))}
       </ul>
+
+      {/* Gestion des formulaire */}
+
+      {/* 1. Création du formulaire */}
+
+      <FruitForm handleAdd={handleAdd} />
     </div>
   );
 };
